@@ -15,30 +15,23 @@
     <groupId>com.cyetechnology</groupId>
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>backend</name>
-    <description>Spring Boot WAR deployable project</description>
+    <description>Spring Boot Backend</description>
 
     <properties>
         <java.version>17</java.version>
     </properties>
 
     <dependencies>
-        <!-- Spring Web -->
+        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Provided Tomcat (disable embedded Tomcat) -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- DevTools (for local development only) -->
+        <!-- Spring Boot DevTools (optional) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -55,7 +48,6 @@
     </dependencies>
 
     <build>
-        <finalName>ROOT</finalName> <!-- Deploy as ROOT.war -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
